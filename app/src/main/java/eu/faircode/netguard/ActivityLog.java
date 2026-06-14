@@ -16,7 +16,7 @@ package eu.faircode.netguard;
     You should have received a copy of the GNU General Public License
     along with NetGuard.  If not, see <http://www.gnu.org/licenses/>.
 
-    Copyright 2015-2025 by Marcel Bokhorst (M66B)
+    Copyright 2015-2026 by Marcel Bokhorst (M66B)
 */
 
 import android.content.ClipData;
@@ -201,7 +201,7 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
                 popup.getMenu().findItem(R.id.menu_protocol).setTitle(Util.getProtocolName(protocol, version, false));
 
                 // Whois
-                final Intent lookupIP = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dnslytics.com/whois-lookup/" + ip));
+                final Intent lookupIP = new Intent(Intent.ACTION_VIEW, Uri.parse("https://search.dnslytics.com/ip/" + ip));
                 if (pm.resolveActivity(lookupIP, 0) == null)
                     popup.getMenu().removeItem(R.id.menu_whois);
                 else

@@ -16,7 +16,7 @@ package eu.faircode.netguard;
     You should have received a copy of the GNU General Public License
     along with NetGuard.  If not, see <http://www.gnu.org/licenses/>.
 
-    Copyright 2015-2025 by Marcel Bokhorst (M66B)
+    Copyright 2015-2026 by Marcel Bokhorst (M66B)
 */
 
 import android.annotation.TargetApi;
@@ -737,7 +737,7 @@ public class AdapterRule extends RecyclerView.Adapter<AdapterRule.ViewHolder> im
                     markPro(context, popup.getMenu().findItem(R.id.menu_block), ActivityPro.SKU_FILTER);
 
                     // Whois
-                    final Intent lookupIP = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dnslytics.com/whois-lookup/" + daddr));
+                    final Intent lookupIP = new Intent(Intent.ACTION_VIEW, Uri.parse("https://search.dnslytics.com/ip/" + daddr));
                     if (pm.resolveActivity(lookupIP, 0) == null)
                         popup.getMenu().removeItem(R.id.menu_whois);
                     else
